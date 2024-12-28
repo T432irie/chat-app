@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   # ↑↑上の記述は削除しましょう↑↑
   root to: "messages#index"
   devise_for :users
+  resources :users, only: [:edit, :update]
 end
